@@ -1,0 +1,7 @@
+precio = float (input("10"))
+if precio > 100:
+    descuento = precio * 0.15 
+    precio_final = precio - descuento       
+    print("se ha hecho un descuento,el total es:" , precio_final)           
+else:
+    print("no hay descuento.El total es" ,precio)          

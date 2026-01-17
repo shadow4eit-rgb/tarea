@@ -1,0 +1,14 @@
+print("Buenas , sea bienvenido a este sistema")
+print("1.Saludar")
+print("2.ver que hora es")
+print("3.retirarse")
+
+opcion = input("selecciona una opcion (1-3)")
+if opcion == "1":
+    print("¡Hola mi estimado usuario!.")
+elif opcion == "2":
+    print("la hora es 7:09 pm.")
+elif opcion == "3":
+    print("Hora de retirarse................................................. bye bye sayonara")
+else:
+    print("Error : elige una opcion valida.Por favor elija 1 , 2 o 3.")

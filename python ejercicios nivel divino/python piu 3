@@ -1,0 +1,4 @@
+base = int(input("cual es la base"))
+altura = int(input("cual es la altura"))
+area = base + altura
+print(f"el area del rectangulo es:{area}")

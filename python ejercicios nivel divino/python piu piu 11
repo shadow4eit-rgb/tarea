@@ -1,0 +1,5 @@
+year = int(input("2066"))
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print("parece ser bisiesto")
+else: 
+    print("no es bisiesto")
