@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>03 - Formularios e Inputs para practicar</title>
+</head>
+<body>
+    <h1>Formulario sencillo (⌐■_■)</h1>
+
+     <form action="/enviar" method="POST">
+        <fieldset>
+            <legend>Datos¯\_(ツ)_/¯</legend>
+        
+          
+            <label for="nombre">Su Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" placeholder="ponga su nombre aqui" required><br><br>
+
+            
+            <label for="email">Correo Electrónico:</label><br>
+            <input type="email" id="email" name="email" placeholder="@correo.com"><br><br>
+
+            
+            <label for="password">Clave:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+
+         
+            <label for="fecha">Fecha en que nacio usted:</label><br>
+            <input type="date" id="fecha" name="fecha"><br><br>
+        </fieldset>
+
+          <fieldset>
+            <legend>Preferencias a su gusto</legend>
+                <p>generó xd</p>
+            <input type="radio" id="masculino" name="genero" value="masculino">
+            <label for="masculino">Masculino</label><br>
+            <input type="radio" id="femenino" name="genero" value="femenino">
+            <label for="femenino">Femenino</label><br><br>
+            <input type="radio" id="helipcotero de guerra" name="genero" value="helipcotero de guerra">
+            <label for="Helicoptero de guerra">Helicoptero de guerra</label>
+
+            <input type="checkbox" id="suscripcion" name="suscripcion" checked>
+          <label for="quieres unirtenos">quieres unirtenos</label>
+            <select name="Ciudad" id="maracaibo">Ciudad</select>
+                <option value="m">maracaibo</option>
+                <option value="ca">Caracas</option>
+                <option value="Tr">tachira</option>
+                <option value="es">esparta</option>
+            </select><br><br>
+             <label for="comentarios">Comentarios que quiera dar:</label><br>
+            <textarea id="comentarios" name="comentarios" rows="9" cols="50"></textarea>
+        </fieldset>
+
+        <br>
+        <button type="submit">Registrarse si quiere</button>
+        <button type="reset">Limpiar, deberia eso esta muy sucio</button>
+    </form>
+</body>
+<footer>siga a abajo</footer>
+<div><p>Este es una cosa random
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+
+    los quiero molestar
+
+
+
+    aqui🍘🍘🍘 tome una galleta
+</p></div>
+</html>
+
+
+
+
