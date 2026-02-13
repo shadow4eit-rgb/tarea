@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Mahoraga</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="Shadow & Light, Mahoraga vs. Dabura.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+        </video>
+    </div>
+
+    <div class="contenido">
+        <h1>Bienvenido</h1>
+        <p>Hola papu, aquí tienes a la leyenda Mahoraga, calcule con un bonito espectáculo.</p>
+    </div>
+
+    <div class="calculator">
+        <input type="text" id="input" readonly placeholder="0">
+
+        <div class="buttons">
+            <button class="button sci" data-number="sin(">sin</button>
+            <button class="button sci" data-number="cos(">cos</button>
+            <button class="button sci" data-number="tan(">tan</button>
+            <button class="button sci" data-number="^">^</button>
+            
+            <button class="button sci" data-number="log(">log</button>
+            <button class="button sci" data-number="ln(">ln</button>
+            <button class="button sci" data-number="√(">√</button>
+            <button class="button delete" data-number="DEL">DEL</button>
+
+            <button class="button" data-number="7">7</button>
+            <button class="button" data-number="8">8</button>
+            <button class="button" data-number="9">9</button>
+            <button class="button operator" data-number="/">/</button>
+
+            <button class="button" data-number="4">4</button>
+            <button class="button" data-number="5">5</button>
+            <button class="button" data-number="6">6</button>
+            <button class="button operator" data-number="*">*</button>
+
+            <button class="button" data-number="1">1</button>
+            <button class="button" data-number="2">2</button>
+            <button class="button" data-number="3">3</button>
+            <button class="button operator" data-number="-">-</button>
+
+            <button class="button" data-number="0">0</button>
+            <button class="button" data-number=".">.</button>
+            <button class="button clear" data-number="AC">AC</button>
+            <button class="button operator" data-number="+">+</button>
+
+            <button id="equal">=</button>
+        </div>
+
+        <div id="historialContent"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
