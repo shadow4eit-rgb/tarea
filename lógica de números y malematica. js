@@ -1,0 +1,11 @@
+function invertirNumero(n) {
+    let invertido = 0;
+    let resto = n;
+
+    while (resto > 0) {
+        let ultimoDigito = resto % 10;
+        invertido = (invertido * 10) + ultimoDigito;
+        resto = (resto - ultimoDigito) / 10; // División entera manual
+    }
+    return invertido;
+}
