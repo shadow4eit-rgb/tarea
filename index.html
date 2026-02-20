@@ -1,67 +1,105 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Mahoraga</title>
+    <title>Mi primera página web detallada</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <a href="#" class="brand">Anime y ficcion</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Explorer</a>
+                <a href="https://www.pinterest.com/shilohmeni/shadow-slave-art">Gallery</a>
+                <a href="#">Contact</a>      
+            </div>
+        </div>
+    </header>
 
-    <div class="video-background">
-        <video autoplay muted loop id="bg-video">
-            <source src="Shadow & Light, Mahoraga vs. Dabura.mp4" type="video/mp4">
-            Tu navegador no soporta videos.
-        </video>
-    </div>
-
-    <div class="contenido">
-        <h1>Bienvenido</h1>
-        <p>Hola papu, aquí tienes a la leyenda Mahoraga, calcule con un bonito espectáculo.</p>
-    </div>
-
-    <div class="calculator">
-        <input type="text" id="input" readonly placeholder="0">
-
-        <div class="buttons">
-            <button class="button sci" data-number="sin(">sin</button>
-            <button class="button sci" data-number="cos(">cos</button>
-            <button class="button sci" data-number="tan(">tan</button>
-            <button class="button sci" data-number="^">^</button>
-            
-            <button class="button sci" data-number="log(">log</button>
-            <button class="button sci" data-number="ln(">ln</button>
-            <button class="button sci" data-number="√(">√</button>
-            <button class="button delete" data-number="DEL">DEL</button>
-
-            <button class="button" data-number="7">7</button>
-            <button class="button" data-number="8">8</button>
-            <button class="button" data-number="9">9</button>
-            <button class="button operator" data-number="/">/</button>
-
-            <button class="button" data-number="4">4</button>
-            <button class="button" data-number="5">5</button>
-            <button class="button" data-number="6">6</button>
-            <button class="button operator" data-number="*">*</button>
-
-            <button class="button" data-number="1">1</button>
-            <button class="button" data-number="2">2</button>
-            <button class="button" data-number="3">3</button>
-            <button class="button operator" data-number="-">-</button>
-
-            <button class="button" data-number="0">0</button>
-            <button class="button" data-number=".">.</button>
-            <button class="button clear" data-number="AC">AC</button>
-            <button class="button operator" data-number="+">+</button>
-
-            <button id="equal">=</button>
+    <section class="home">
+        <video class="video-slide active" src="Gokuuuuu.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="one piece.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="BABY.SUKUNA.MP4" autoplay muted loop></video>  
+        <video class="video-slide" src="gilgamesh.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="Sunny.mp4" autoplay muted loop></video>                  
+        
+        <div class="content active">
+            <h1>Dragon ball<br><span>Es genial</span></h1>
+            <p>Viva goku , y vegeta </p>   
+            <a href="#">Lea mas</a>
+        </div>
+        <div class="content">
+            <h1>One piece<br><span>Ace es pendenjo</span></h1>
+            <p>Su muerte jodio a luffy y se convirtio en una dona xd por impulsivo xd</p>   
+            <a href="#">Lea mas</a>
+        </div>
+        <div class="content">
+            <h1>Yo leyendo lobotomia kaisen<br><span>Fan del manga jujutsiano</span></h1>
+            <p>A diferencia de medio fandom ,se leyo todo y opina que gege es el novio de sukuna</p>   
+            <a href="#">lea mas</a>
+        </div>
+        <div class="content">
+            <h1>Ya no se ocurre nada  <br><span> Fate </span></h1>
+            <p>Lo que comenzo como una eroge  se convirtio en una gran franquicia quien lo diria.</p>   
+            <a href="#">lea mas</a>
+        </div>
+        <div class="content">
+            <h1>Sunny es la cabra <br><span>Sunny es superior a song jinwoo</span></h1>
+            <p>Lo malo es que es un idiota pero tiene mejor desarrollo</p>   
+            <a href="#">lea mas</a>
         </div>
 
-        <div id="historialContent"></div>
-    </div>
+        <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
 
-    <script src="script.js"></script>
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        // JavaScript para menú responsive
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");        
+        }); 
+
+        // JavaScript para slider de videos
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".video-slide");
+        const contents = document.querySelectorAll(".content");
+
+        var sliderNav = function(manual){
+            btns.forEach((btn) => btn.classList.remove("active"));
+            slides.forEach((slide) => slide.classList.remove("active"));
+            contents.forEach((content) => content.classList.remove("active"));
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+            contents[manual].classList.add("active");
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                sliderNav(i);
+            });
+        });
+    </script>
 </body>
 </html>
-
 
